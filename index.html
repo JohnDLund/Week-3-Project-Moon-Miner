@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Moon Miner</title>
+</head>
+
+<body>
+  <header class="container-fluid">
+    <div class="row text-center">
+      <div class="col-12">
+        <h1>CURRENT CHEESE</h1>
+        <h3 id="currentCheese">0</h3>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-12 p-2">
+        <img class="main-img" src="moon.jpg" alt="stock graph picture" onclick="mine()" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-xs-12 p-4">
+        <table>
+          <tr>
+            <h2 class="inventory p-2"><i><u>INVENTORY</u></i></h2>
+          </tr>
+          <tr>
+            <th class="p-2">
+              Item
+            </th>
+            <th class="p-2">
+              Quantity <br>Owned
+            </th>
+            <th class="p-2">
+              Total <br>Multiplier
+            </th>
+          </tr>
+          <tr>
+            <td class="p-1">Shovels</td>
+            <td class="p-1"><span id="currentShovels" class="px-2">0</span></td>
+            <td class="p-1"><span id="shovelsMultiplier" class="px-2">0</span></td>
+          </tr>
+          <tr>
+            <td class="p-1">Moondozers</td>
+            <td class="p-1"><span id="currentMoondozers" class="px-2">0</span></td>
+            <td class="p-1"><span id="moondozersMultiplier" class="px-2">0</span></td>
+          </tr>
+          <tr>
+            <td class="p-1">Robots</td>
+            <td class="p-1"><span id="currentRobots" class="px-2">0</span></td>
+            <td class="p-1"><span id="robotsMultiplier" class="px-2">0</span></td>
+          </tr>
+          <tr>
+            <td class="p-1">Meteor Strikes</td>
+            <td class="p-1"><span id="currentMeteorStrikes" class="px-2">0</span></td>
+            <td class="p-1"><span id="meteorStrikesMultiplier" class="px-2">0</span></td>
+          </tr>
+        </table>
+
+        <!-- <h2>INVENTORY</h2>
+        <h3>Shovels:<span id="currentShovels" class="px-2">0</span></h3>
+        <h3>Moondozers:<span id="currentBulldozers" class="px-2">0</span></h3>
+        <h3>Robots:<span id="currentRobots" class="px-2">0</span></h3>
+        <h3>Meteor Strikes:<span id="currentMeteorStrikes" class="px-2">0</span></h3> -->
+
+      </div>
+      <div class="col-md-6 col-xs-12 p-4">
+        <button id="shovelButton" class="btn btn-warning m-1" onclick="buyShovel()" disabled>Buy Shovel</button>
+        <br><button id="moondozerButton" class="btn btn-warning m-1" onclick="buyBulldozer()">Buy Moondozer</button>
+        <br><button id="robotButton" class="btn btn-warning m-1" onclick="buyRobot()">Buy Robot</button>
+        <br><button id="meteorButton" class="btn btn-warning m-1" onclick="buyMeteor()">Buy Meteor Strike</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script> -->
+  <script src="app.js"></script>
+</body>
+
+</html>
