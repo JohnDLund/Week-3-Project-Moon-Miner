@@ -30,7 +30,10 @@ th {
 }
 
 button {
-  width: 50%;
+  color: #ff0000;
+  font-weight: bolder;
+  width: 90%;
+  text-shadow: 1px 1px rgb(255, 51, 0);
 }
 
 

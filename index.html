@@ -24,11 +24,21 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 col-xs-12 p-4 m-auto d-flex justify-content-end">
+      
+      <div class="col-md-3 order-md-1 d-flex flex-column align-items-start  justify-content-center">
+        <h4>Click Upgrades</h4>
+        <button id="shovelButton" class="btn btn-warning m-1" onclick="buyShovel()" disabled>Buy Shovel</button>
+        <button id="moondozerButton" class="btn btn-warning m-1" onclick="buyBulldozer()">Buy Moondozer</button>
+      </div>
+      <div class="col-md-3 order-md-2 d-flex flex-column align-items-start mr-auto  justify-content-center">
+        <h4>Auto Upgrades</h4>
+        <button id="robotButton" class="btn btn-warning m-1" onclick="buyRobot()">Buy Robot</button>
+        <button id="meteorButton" class="btn btn-warning m-1" onclick="buyMeteor()">Buy Meteor Strike</button>
+      </div>
+
+      <div class="col-md-4 order-lmd-0 p-4 mx-auto d-flex flex-column">
         <table>
-          <tr>
-            <th><h2 class="inventory p-2"><i><u>INVENTORY</u></i></h2></th>
-          </tr>
+          <h2 class="inventory p-2"><i><u>INVENTORY</u></i></h2>
           <tr>
             <th class="th-2 p-2">
               Item
@@ -61,20 +71,15 @@
             <td class="p-1"><span id="meteorStrikesMultiplier" class="px-2">0</span></td>
           </tr>
         </table>
+      </div>
 
-        <!-- <h2>INVENTORY</h2>
+      <!-- <h2>INVENTORY</h2>
         <h3>Shovels:<span id="currentShovels" class="px-2">0</span></h3>
         <h3>Moondozers:<span id="currentBulldozers" class="px-2">0</span></h3>
         <h3>Robots:<span id="currentRobots" class="px-2">0</span></h3>
         <h3>Meteor Strikes:<span id="currentMeteorStrikes" class="px-2">0</span></h3> -->
 
-      </div>
-      <div class="col-md-4 col-xs-12 p-4 m-auto">
-        <button id="shovelButton" class="btn btn-warning m-1" onclick="buyShovel()" disabled>Buy Shovel</button>
-        <br><button id="moondozerButton" class="btn btn-warning m-1" onclick="buyBulldozer()">Buy Moondozer</button>
-        <br><button id="robotButton" class="btn btn-warning m-1" onclick="buyRobot()">Buy Robot</button>
-        <br><button id="meteorButton" class="btn btn-warning m-1" onclick="buyMeteor()">Buy Meteor Strike</button>
-      </div>
+    </div>
     </div>
   </header>
 

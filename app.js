@@ -1,4 +1,4 @@
-let cheese = 1000000
+let cheese = 5000
 
 let clickUpgrades = {
   shovels: {
@@ -32,7 +32,6 @@ startInterval()
 
 function buyShovel() {
   if (cheese >= clickUpgrades.shovels.price) {
-    document.getElementById("shovelButton"); btn.disabled = false;
     cheese -= clickUpgrades.shovels.price
     clickUpgrades.shovels.quantity++
   }
@@ -67,7 +66,7 @@ function mine() {
     cheese += clickUpgrades.shovels.multiplier * clickUpgrades.shovels.quantity
   } if (clickUpgrades.bulldozer.quantity) {
     cheese += clickUpgrades.bulldozer.multiplier * clickUpgrades.bulldozer.quantity
-  } 
+  }
   update()
 }
 
@@ -77,22 +76,19 @@ function collectAutoUpgrades() {
     cheese += automaticUpgrades.robots.multiplier * automaticUpgrades.robots.quantity
   } if (automaticUpgrades.meteors.quantity) {
     cheese += automaticUpgrades.meteors.multiplier * automaticUpgrades.meteors.quantity
+  }
+  update()
 }
-update()
-}
-
 
 function startInterval() {
- setInterval(collectAutoUpgrades, 3000);
+  setInterval(collectAutoUpgrades, 3000);
 }
-
-
 
 function update() {
 
   document.getElementById("currentCheese").innerText = cheese.toString()
 
-  document.getElementById("currentShovels").innerText = clickUpgrades.shovels.quantity.toString()
+  document.getElementById("currentShovels").innerHTML = clickUpgrades.shovels.quantity.toString()
   document.getElementById("currentMoondozers").innerText = clickUpgrades.bulldozer.quantity.toString()
   document.getElementById("currentRobots").innerText = automaticUpgrades.robots.quantity.toString()
   document.getElementById("currentMeteorStrikes").innerText = automaticUpgrades.meteors.quantity.toString()
@@ -101,12 +97,34 @@ function update() {
   document.getElementById("moondozersMultiplier").innerText = clickUpgrades.bulldozer.multiplier.toString() * clickUpgrades.bulldozer.quantity.toString()
   document.getElementById("robotsMultiplier").innerText = automaticUpgrades.robots.multiplier.toString() * automaticUpgrades.robots.quantity.toString()
   document.getElementById("meteorStrikesMultiplier").innerText = automaticUpgrades.meteors.multiplier.toString() * automaticUpgrades.meteors.quantity.toString()
-  
-  document.getElementById("shovelButton").innerText = "Buy Shovel:   $" + clickUpgrades.shovels.price
-  document.getElementById("moondozerButton").innerText = "Buy Moondozer:   $" + clickUpgrades.bulldozer.price
-  document.getElementById("robotButton").innerText = "Buy Robot:   $" + automaticUpgrades.robots.price
-  document.getElementById("meteorButton").innerText = "Buy Meteor Strike:   $" + automaticUpgrades.meteors.price
+
+  document.getElementById("shovelButton").innerHTML = "Buy Shovel:<br> $" + clickUpgrades.shovels.price
+  document.getElementById("moondozerButton").innerHTML = "Buy Moondozer:<br> $" + clickUpgrades.bulldozer.price
+  document.getElementById("robotButton").innerHTML = "Buy Robot:<br> $" + automaticUpgrades.robots.price
+  document.getElementById("meteorButton").innerHTML = "Buy Meteor Strike:<br> $" + automaticUpgrades.meteors.price
+
+  if (cheese >= clickUpgrades.shovels.price) {
+    document.getElementById("shovelButton").disabled = false
+  } else {
+    document.getElementById("shovelButton").disabled = true
+  }
+
+  if (cheese >= clickUpgrades.bulldozer.price) {
+    document.getElementById("moondozerButton").disabled = false
+  } else {
+    document.getElementById("moondozerButton").disabled = true
+  }
+
+  if (cheese >= automaticUpgrades.robots.price) {
+    document.getElementById("robotButton").disabled = false
+  } else {
+    document.getElementById("robotButton").disabled = true
+  }
+
+  if (cheese >= automaticUpgrades.meteors.price) {
+    document.getElementById("meteorButton").disabled = false
+  } else {
+    document.getElementById("meteorButton").disabled = true
+  }
 
 }
-
-
