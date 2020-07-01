@@ -13,7 +13,7 @@
 <body>
   <header class="container-fluid">
     <div class="row text-center">
-      <div class="col-12">
+      <div class="col-12 pt-4 inventory">
         <h1>CURRENT CHEESE</h1>
         <h3 id="currentCheese">0</h3>
       </div>
@@ -24,19 +24,19 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 col-xs-12 p-4">
+      <div class="col-md-4 col-xs-12 p-4 m-auto d-flex justify-content-end">
         <table>
           <tr>
-            <h2 class="inventory p-2"><i><u>INVENTORY</u></i></h2>
+            <th><h2 class="inventory p-2"><i><u>INVENTORY</u></i></h2></th>
           </tr>
           <tr>
-            <th class="p-2">
+            <th class="th-2 p-2">
               Item
             </th>
-            <th class="p-2">
+            <th class="th-2 p-2">
               Quantity <br>Owned
             </th>
-            <th class="p-2">
+            <th class="th-2 p-2">
               Total <br>Multiplier
             </th>
           </tr>
@@ -69,7 +69,7 @@
         <h3>Meteor Strikes:<span id="currentMeteorStrikes" class="px-2">0</span></h3> -->
 
       </div>
-      <div class="col-md-6 col-xs-12 p-4">
+      <div class="col-md-4 col-xs-12 p-4 m-auto">
         <button id="shovelButton" class="btn btn-warning m-1" onclick="buyShovel()" disabled>Buy Shovel</button>
         <br><button id="moondozerButton" class="btn btn-warning m-1" onclick="buyBulldozer()">Buy Moondozer</button>
         <br><button id="robotButton" class="btn btn-warning m-1" onclick="buyRobot()">Buy Robot</button>

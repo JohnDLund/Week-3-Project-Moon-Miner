@@ -1,5 +1,5 @@
 .main-img {
-  max-width: 30%;
+  max-width: 20%;
   height: auto;
   border-radius: 50%;
   box-shadow: 10px 5px 5px #ff0000;
@@ -11,10 +11,8 @@ body {
   color: white;
 }
 
-th, td {
- border: solid white 2px;
- border-collapse: collapse;
- box-shadow:  5px 5px rgba(146, 146, 146, 0.377);
+table {
+  background-color: rgba(0, 0, 255, 0.39);
 }
 
 th {
@@ -22,13 +20,21 @@ th {
   text-align: center;
 }
 
-table {
-  background-color: rgba(0, 0, 255, 0.39);
+.th-2, td {
+  border: solid white 2px;
+  box-shadow:  5px 5px rgba(146, 146, 146, 0.377);
 }
 
 .inventory {
   text-shadow:3px 3px rgba(43, 184, 0, 0.548);
 }
+
+button {
+  width: 50%;
+}
+
+
+
 
 /* .button.disabled {
   opacity: 0.65; 
